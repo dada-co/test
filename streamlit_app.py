@@ -1,3 +1,5 @@
+import time
+
 import streamlit as st
 
 """
@@ -17,7 +19,6 @@ with st.echo():
     from webdriver_manager.chrome import ChromeDriverManager
     from webdriver_manager.core.os_manager import ChromeType
 
-    @st.cache_resource
     def get_driver():
         return webdriver.Chrome(
             service=Service(
@@ -28,9 +29,10 @@ with st.echo():
 
     options = Options()
     options.add_argument("--disable-gpu")
-    options.add_argument("--headless")
+    #options.add_argument("--headless")
 
     driver = get_driver()
-    driver.get("http://example.com")
+    driver.get("https://www.cnn.com")
 
-    st.code(driver.page_source)
+    time.sleep(120)
+    driver.quit()
