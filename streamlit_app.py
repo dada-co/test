@@ -32,6 +32,7 @@ user_data_dir = "./chrome_user_data"  # Replace with the desired path to save us
 # Ensure the directory exists
 # Setup Chrome options to use the custom user data directory
 chrome_options = Options()
+chrome_options.add_argument(f"--user-data-dir={user_data_dir}")  # Specify the user data directory
 chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--headless")
 
