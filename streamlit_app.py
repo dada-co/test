@@ -32,7 +32,7 @@ options.add_argument("--disable-gpu")
 options.add_argument("--headless")
 
 driver = get_driver()
-driver.get("https://www.cnn.com")
+driver.get("https://www.example.com")
 
 time.sleep(7)
 screenshot1_file = "test.png"
