@@ -35,4 +35,8 @@ with st.echo():
     driver = get_driver()
     driver.get("https://www.cnn.com")
 
-    time.sleep(120)
+    time.sleep(7)
+    screenshot1_file = "testpng"
+    driver.save_screenshot(screenshot1_file)
+    time.sleep(7)
+    st.image(screenshot1_file)
