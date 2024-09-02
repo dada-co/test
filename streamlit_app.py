@@ -35,4 +35,3 @@ with st.echo():
     driver.get("https://www.cnn.com")
 
     time.sleep(120)
-    driver.quit()
