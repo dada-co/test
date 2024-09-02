@@ -29,13 +29,7 @@ def get_driver():
 
 chrome_options = Options()
 chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument(
-    "user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36")
-chrome_options.add_argument("--start-maximized")
 chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-# Simulate San Francisco timezone by setting environment variables
-chrome_options.add_argument("TZ=America/Los_Angeles")
 
 driver = get_driver()
 driver.get("https://www.amazon.com")
