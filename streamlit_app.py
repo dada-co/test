@@ -35,7 +35,7 @@ driver = get_driver()
 driver.get("https://www.cnn.com")
 
 time.sleep(7)
-screenshot1_file = "testpng"
+screenshot1_file = "test.png"
 driver.save_screenshot(screenshot1_file)
 time.sleep(7)
 st.image(screenshot1_file)
